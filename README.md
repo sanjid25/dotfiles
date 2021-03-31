@@ -4,7 +4,7 @@ End goal is for `git` files to reside in `$HOME/.cfg` but actual dot files to be
 
 - Start with `clone`ing the bare repo in `$HOME/.cfg`
 
-`git clone --bare https://github.com/officepd/dotfiles.git $HOME/.cfg`
+`git clone --bare https://github.com/sanjid25/dotfiles.git $HOME/.cfg`
 
 - `config` outta perform `git` calls on cloned bare repo but have working tree in home directory.
 
