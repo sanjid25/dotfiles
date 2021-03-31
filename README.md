@@ -24,7 +24,7 @@ End goal is for `git` files to reside in `$HOME/.cfg` but actual dot files to be
 
 `config add .bash_profile`
 
-`config commit -m "Add bashrc"`
+`config commit -m "Add bash_profile"`
 
 `config push`
 
