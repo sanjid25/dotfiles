@@ -1,1 +1,3 @@
-alias config='/usr/bin/git --git-dir=/Users/sanjidrahman/.cfg/ --work-tree=/Users/sanjidrahman'
+set -o vi
+bind '"jk":vi-movement-mode'
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
