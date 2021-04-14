@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 	let g:vim_tex_quickfix_mode=0
 	set conceallevel=1
 	let g:tex_conceal='abdmg'
-	Plug 'jalvesaq/Nvim-R'
+	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
         Plug 'junegunn/seoul256.vim'
         Plug 'junegunn/vim-easy-align'
         Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
