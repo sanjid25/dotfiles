@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/sanjidrahman/.sbt/boot'
+let g:netrw_dirhist_3='/Users/sanjidrahman/.sbt'
+let g:netrw_dirhist_2='/Users/sanjidrahman/.sbt/1.0'
+let g:netrw_dirhist_1='/Users/sanjidrahman/.sbt/1.0/zinc'
+let g:netrw_dirhist_0='/Users/sanjidrahman/.sbt/1.0'
+let g:netrw_dirhist_9='/Users/sanjidrahman/.sbt/1.0/templates'
+let g:netrw_dirhist_8='/Users/sanjidrahman/.sbt/1.0'
+let g:netrw_dirhist_7='/Users/sanjidrahman/.sbt/1.0/staging'
+let g:netrw_dirhist_6='/Users/sanjidrahman/.sbt/1.0'
+let g:netrw_dirhist_5='/Users/sanjidrahman/.sbt/1.0/server'
