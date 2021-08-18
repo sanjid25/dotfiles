@@ -11,9 +11,7 @@ call plug#begin('~/.vim/plugged')
 	let g:tex_conceal='abdmg'
 	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
         Plug 'junegunn/seoul256.vim'
-        Plug 'junegunn/vim-easy-align'
-        Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-        Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+        Plug 'preservim/nerdtree'
         " ...
 
 call plug#end()
