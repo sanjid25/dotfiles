@@ -2,7 +2,7 @@
 
 # Git command in the shell
 
-```
+```{console}
 user@device:~$ git filter-branch -f --env-filter '
 WRONG_EMAIL="<wrong email>"
 NEW_NAME="<user name>"
