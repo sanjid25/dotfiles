@@ -26,6 +26,8 @@ End goal is for `git` files to reside in `$HOME/.cfg` but actual dot files to be
 
 `config commit -m "Add bashrc"`
 
+`config commit -m "Add bash_profile"`
+
 `config push`
 
 - Find out which dot files are being tracked [source](https://stackoverflow.com/questions/15606955/how-can-i-make-git-show-a-list-of-the-files-that-are-being-tracked)
