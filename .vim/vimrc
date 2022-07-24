@@ -1,3 +1,10 @@
+call plug#begin('~/.vim/plugged')
+	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+    Plug 'gruvbox-community/gruvbox'
+	Plug 'davidhalter/jedi-vim'
+    " Plug 'preservim/nerdtree'
+call plug#end()
+
 syntax on " syntax highlighting on 
 set relativenumber " relative numbers on the left side of the screen
 set number " absoute numbers on the left side of the screen
@@ -19,10 +26,3 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 imap jk <esc>
 
-call plug#begin('~/.vim/plugged')
-	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-	Plug 'davidhalter/jedi-vim'
-    Plug 'junegunn/seoul256.vim'
-    Plug 'preservim/nerdtree'
-
-call plug#end()
