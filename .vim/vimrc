@@ -1,10 +1,15 @@
 call plug#begin('~/.vim/plugged')
-	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
     Plug 'gruvbox-community/gruvbox'
+    Plug 'itchyny/lightline.vim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 	Plug 'davidhalter/jedi-vim'
     " Plug 'preservim/nerdtree'
+    " Plug 'dense-analysis/ale'
 call plug#end()
 
+" vim specific
 syntax on " syntax highlighting on 
 set relativenumber " relative numbers on the left side of the screen
 set number " absoute numbers on the left side of the screen
@@ -23,6 +28,26 @@ set incsearch " get result WHILE you search
 set colorcolumn=80 " vertical bar for when you are going horizontally too far
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+" Gruvbox specific settings
+" https://github.com/gruvbox-community/gruvbox/wiki
+autocmd vimenter * ++nested colorscheme gruvbox
+set background=dark
 
-imap jk <esc>
+" lightline.vim
+set laststatus=2
+let g:lightline = {
+    \     'colorscheme': 'wombat',
+    \     'active': {
+    \       'left': [
+    \           ['mode', 'paste'],
+    \           ['gitbranch', 'readonly', 'filename', 'modified']
+    \       ]
+    \     },
+    \     'component_function': {
+    \         'gitbranch': 'FugitiveHead'
+    \     }
+    \ }
 
+" remaping
+imap jk <esc> 
+nnoremap <space> za
