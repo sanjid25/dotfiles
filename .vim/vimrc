@@ -21,6 +21,7 @@ set expandtab " tabs are filled with spaces
 set shiftwidth=4
 set smartindent " do the best job to indent for you 
 set nowrap " let text flow off the screen
+" placeholder to add wrap for specific extensions like .md files
 set smartcase " case sensitive search until you put a capital letter
 set noswapfile " no vim.swap files in the project
 set incsearch " get result WHILE you search
@@ -54,7 +55,7 @@ imap jk <esc>
 " normal mode from visual mode
 xnoremap jk <Esc>
 
-nnoremap <space> za
+" nnoremap <space> za
 
 " search into (sub)directories recursively
 set path+=**
