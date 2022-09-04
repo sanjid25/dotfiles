@@ -51,3 +51,10 @@ let g:lightline = {
 " remaping
 imap jk <esc> 
 nnoremap <space> za
+
+" search into (sub)directories recursively
+set path+=**
+
+" enable menu to tab through
+set wildmenu
+set wildmode=list:longest,full
