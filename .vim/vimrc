@@ -49,7 +49,11 @@ let g:lightline = {
     \ }
 
 " remaping
+" normal mode from insert mode
 imap jk <esc> 
+" normal mode from visual mode
+xnoremap jk <Esc>
+
 nnoremap <space> za
 
 " search into (sub)directories recursively
