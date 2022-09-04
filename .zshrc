@@ -6,6 +6,9 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
+# enable reverse-i-search
+# which gets disabled with zsh
+
 # use vim bindings in the shell
 bindkey -v 
 # use `jk` to exit out of insert mode
