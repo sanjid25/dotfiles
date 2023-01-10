@@ -1,17 +1,23 @@
 # oh-my-zsh default config
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+
+ZSH_THEME="strug"
+# 2 other good themes [rgm, refined]
+
+# oh-my-zsh plugings
 plugins=(
   git
+  zsh-aws-vault
 )
 source $ZSH/oh-my-zsh.sh
-
-# enable reverse-i-search
-# which gets disabled with zsh
 
 # VIM BINDING 
 bindkey -v 
 bindkey 'jk' vi-cmd-mode # use `jk` to exit out of insert mode
+
+# enable reverse-i-search
+# which gets disabled with zsh
+bindkey '^r' history-incremental-search-backward
 
 # alias to manage dot files with git
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -28,4 +34,5 @@ alias tl='tmux list-sessions'
 
 # PERSONAL 
 alias set_web='cd ~/projects/sanjidnet.github.io'
+alias set_local='cd /mnt/c/Users/SanjidRahman/projects/'
 
