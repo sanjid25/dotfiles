@@ -13,3 +13,8 @@ alias tn='tmux new-session'
 
 # Lists all ongoing sessions
 alias tl='tmux list-sessions'
+
+# RUBY SETTINGS 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"

@@ -1,22 +1,40 @@
+" SET LOCAL LEADER
+let mapleader = ','
+let g:mapleader = ','
+
+" VIM PLUGINS
 call plug#begin('~/.vim/plugged')
-    Plug 'gruvbox-community/gruvbox'
-    Plug 'itchyny/lightline.vim'
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-	Plug 'davidhalter/jedi-vim'
-    " Plug 'preservim/nerdtree'
-    " Plug 'dense-analysis/ale'
+" Aesthetic
+Plug 'gruvbox-community/gruvbox'
+Plug 'itchyny/lightline.vim'
+
+" Filesystem Navigation
+Plug 'preservim/nerdtree'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Autocomplete
+Plug 'davidhalter/jedi-vim'
+Plug 'ncm2/ncm2'
+Plug 'Raimondi/delimitMate' " parenthesis closing
+
+" IDE-esque
+" R
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'} " IDE itself
+Plug 'gaalcaras/ncm-R' " add synchronous autocompletion for R
+
+" Plug 'dense-analysis/ale'
 call plug#end()
 
-" vim specific
+" VIM SPECIFIC
 syntax on " syntax highlighting on 
 set relativenumber " relative numbers on the left side of the screen
 set number " absoute numbers on the left side of the screen
 set nohlsearch " 
 set hidden " does not force you to save a buffer to move away from you
-set noerrorbells " no annoying sounds when you reach the end of the line
-set tabstop=4 softtabstop=4 " 4 characters and 4 spaces for a tab respectively
+set noerrorbells " no annoying sounds when you reach the end of the line set tabstop=4 softtabstop=4 " 4 characters and 4 spaces for a tab respectively
 set expandtab " tabs are filled with spaces
 set shiftwidth=4
 set smartindent " do the best job to indent for you 
@@ -25,6 +43,11 @@ set nowrap " let text flow off the screen
 set smartcase " case sensitive search until you put a capital letter
 set noswapfile " no vim.swap files in the project
 set incsearch " get result WHILE you search
+
+" create if folder exists in current, home... else /tmp//
+set backupdir=.backup/,~/.backup/,/tmp//
+set directory=.swp/,~/.swp/,/tmp//
+set undodir=.undo/,~/.undo/,/tmp//
 
 set colorcolumn=80 " vertical bar for when you are going horizontally too far
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -37,31 +60,55 @@ set background=dark
 " lightline.vim
 set laststatus=2
 let g:lightline = {
-    \     'colorscheme': 'wombat',
-    \     'active': {
-    \       'left': [
-    \           ['mode', 'paste'],
-    \           ['gitbranch', 'readonly', 'filename', 'modified']
-    \       ]
-    \     },
-    \     'component_function': {
-    \         'gitbranch': 'FugitiveHead'
-    \     }
-    \ }
+            \     'colorscheme': 'wombat',
+            \     'active': {
+            \       'left': [
+            \           ['mode', 'paste'],
+            \           ['gitbranch', 'readonly', 'filename', 'modified']
+            \       ]
+            \     },
+            \     'component_function': {
+            \         'gitbranch': 'FugitiveHead'
+            \     }
+            \ }
 
-" remaping
+" REMAPING
 " normal mode from insert mode
 imap jk <esc> 
 " normal mode from visual mode
 xnoremap jk <Esc>
+" cnoremap jk <Esc> " CONTEMPLATING
 
 " nnoremap <space> za
+" navigate between splits
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+" Toggle paste mode mode with <Leader>pp
+nnoremap <Leader>pp :set paste!<CR>
+
+" Indent whole file while preserving cursor location with <Leader>=
+nnoremap <Leader>= m'gg=G`'
+
+" Add a semicolon to the current line without moving the cursor with <Leader>;
+nnoremap <Leader>; m'A;<ESC>`'
+
+" Source vimrc with <Leader>vc
+nnoremap <Leader>vc :source ~/.vimrc<CR>:echo "Reloaded .vimrc"<CR>
+
+" Clear trailing whitespace with <Leader>cw
+nnoremap <Leader>cw :%s/\s\+$//g<CR>:nohlsearch<CR>
+
+" Nerdtree mappings. nt = toggle, nf = find.
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 
 " search into (sub)directories recursively
 set path+=**
 
-" enable menu to tab through
-set wildmenu
+" enable menu to tab throughset wildmenu
 set wildmode=list:longest,full
 
 " smooth scrolling horizontally
@@ -69,6 +116,11 @@ nnoremap <silent> zh :call HorizontalScrollMode('h')<CR>
 nnoremap <silent> zl :call HorizontalScrollMode('l')<CR>
 nnoremap <silent> zH :call HorizontalScrollMode('H')<CR>
 nnoremap <silent> zL :call HorizontalScrollMode('L')<CR>
+
+" NCM2
+" autocmd BufEnter * call ncm2#enable_for_buffer()    " To enable ncm2 for all buffers.
+" set completeopt=noinsert,menuone,noselect           " :help Ncm2PopupOpen for more
+" information.
 
 function! HorizontalScrollMode( call_char )
     if &wrap
