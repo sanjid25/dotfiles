@@ -1,0 +1,2 @@
+require("sanjidnet")
+print("Hello!")
