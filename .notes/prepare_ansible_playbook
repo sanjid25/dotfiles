@@ -1,7 +1,11 @@
 - apt-get-install and upgrade
 - install git
+- install tmux
 - clone and setup dotfiles
+- install vim 
+- install vim plugins
 - install python
+- install rbenv
 - install bash
 - install zsh
 - install oh-my-zsh
