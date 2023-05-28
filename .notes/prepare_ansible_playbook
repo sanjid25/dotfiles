@@ -1,8 +1,9 @@
 - apt-get-install and upgrade
 - install git
-- install tmux
-- clone and setup dotfiles
 - install vim 
+- setup ssh for github
+- clone and setup dotfiles
+- install tmux
 - install vim plugins
 - install python
 - install rbenv
