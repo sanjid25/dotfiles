@@ -16,8 +16,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Autocomplete
-Plug 'davidhalter/jedi-vim'
-Plug 'ncm2/ncm2'
 Plug 'Raimondi/delimitMate' " parenthesis closing
 
 " IDE-esque
@@ -96,7 +94,7 @@ nnoremap <Leader>= m'gg=G`'
 nnoremap <Leader>; m'A;<ESC>`'
 
 " Source vimrc with <Leader>vc
-nnoremap <Leader>vc :source ~/.vimrc<CR>:echo "Reloaded .vimrc"<CR>
+nnoremap <Leader>vc :source ~/.vim/vimrc<CR>:echo "Reloaded .vimrc"<CR>
 
 " Clear trailing whitespace with <Leader>cw
 nnoremap <Leader>cw :%s/\s\+$//g<CR>:nohlsearch<CR>
