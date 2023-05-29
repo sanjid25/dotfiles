@@ -1,2 +1,2 @@
 require("sanjidnet")
-print("Hello!")
+print("Hello from index!")
