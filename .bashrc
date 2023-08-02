@@ -24,3 +24,8 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # TERRAFORM SETTINGS
 complete -C /usr/bin/terraform terraform
+
+# R SETTINGS
+function knit { Rscript -e "rmarkdown::render('$1')"; }
+export -f knit
+complete -f -X '!*.Rmd' knit

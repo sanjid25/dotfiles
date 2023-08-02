@@ -41,3 +41,5 @@ alias source-zsh='source ~/.zshrc'
 alias set_web='cd ~/projects/sanjidnet.github.io'
 alias set_local='cd /mnt/c/Users/SanjidRahman/projects/'
 
+function knit { Rscript -e "rmarkdown::render('$1')"; }
+complete -f -X '!*.Rmd' knit
