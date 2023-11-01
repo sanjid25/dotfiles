@@ -3,6 +3,3 @@
 .vim/.netrwhist
 .oh-my-zsh
 .config/*
-!.config/nvim
-.config/nvim/.netrwhist
-.config/nvim/plugin
