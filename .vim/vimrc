@@ -23,6 +23,8 @@ Plug 'Raimondi/delimitMate' " parenthesis closing
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'} " IDE itself
 Plug 'gaalcaras/ncm-R' " add synchronous autocompletion for R
 
+Plug 'hashivim/vim-terraform'
+
 " Plug 'dense-analysis/ale'
 call plug#end()
 
