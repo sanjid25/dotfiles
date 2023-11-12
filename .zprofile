@@ -1,8 +1,14 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# EXPORT PATH
 # added by Snowflake SnowSQL installer v1.2
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+
+if [ -d $HOME/projects/flutter/bin ]; then
+  echo 'Flutter bin found'
+  export PATH="$PATH:$HOME/projects/flutter/bin"
+fi
 
 # SOURCES
 if [ -f $HOME/snow.env ]; then
