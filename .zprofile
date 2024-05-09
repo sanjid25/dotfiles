@@ -10,6 +10,10 @@ if [ -d $HOME/projects/flutter/bin ]; then
   export PATH="$PATH:$HOME/projects/flutter/bin"
 fi
 
+# Ruby
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # SOURCES
 if [ -f $HOME/snow.env ]; then
   echo 'Snow Env Found'

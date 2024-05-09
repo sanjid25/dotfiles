@@ -25,3 +25,4 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 function knit { Rscript -e "rmarkdown::render('$1')"; }
 complete -f -X '!*.Rmd' knit
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
